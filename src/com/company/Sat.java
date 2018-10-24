@@ -1,7 +1,6 @@
 package com.company;
 
 public class Sat {
-
     private  int sekunde;
     private  int sati;
     private  int minute;
@@ -11,13 +10,11 @@ public class Sat {
         this.setMinute(minute);
         this.setSekunde(sekunde);
     }
-
     void   Postavi(int sati, int minute, int sekunde) {
         this.setSati(sati);
         this.setMinute(minute);
         this.setSekunde(sekunde);
     }
-
     public  void Sljedeci() {
         setSekunde(getSekunde() + 1);
         if (getSekunde() == 60) {
@@ -30,7 +27,6 @@ public class Sat {
         }
         if (getSati() == 24) setSati(0);
     }
-
     public  void Prethodni() {
         setSekunde(getSekunde() - 1);
         if (getSekunde() == -1) {
@@ -44,14 +40,14 @@ public class Sat {
         if (getSati() == -1) setSati(23);
     }
 
-
-    public    void PomjeriZa(int pomak) {
+    public void PomjeriZa(int pomak) {
         if (pomak > 0) for (int i = 0; i < pomak; i++) Sljedeci();
         else for (int i = 0; i < -pomak; i++) Prethodni();
     }
     public  void Ispisi() {
         System.out.printf("%d:%d:%d\n", getSati(), getMinute(), getSekunde());
     }
+
 
     public int getSekunde() {
         return sekunde;
